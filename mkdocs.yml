@@ -1,0 +1,15 @@
+site_name: django-admin-api 中文文档
+theme: readthedocs
+pages:
+- 主页: index.md
+- 后端:
+  - 基础玩法: backend-basic.md
+  - 高阶玩法: backend-advance.md
+- 前端:
+  - Antd框架: frontend-antd.md
+  - Element框架: frontend-element.md
+  - Vant框架: frontend-vant.md
+- 生产环境部署:
+  - 前端: publish-frontend.md
+  - 后端: publish-backend.md
+- 协议: api.md
