@@ -232,6 +232,8 @@ row-key|主键名|string|-
 selectable|是否多选|boolean|false
 deletable|是否可删除|boolean|false
 
+> 需要注意的是在`selectable=true`时，右滑删除是禁用的，这时`deletable`将失效，这是为了符合移动端的操作习惯
+
 - 事件
 
 事件名|说明|回调参数
@@ -239,3 +241,91 @@ deletable|是否可删除|boolean|false
 click|记录点击|row
 select|记录选择|row
 delete|记录删除|keys
+
+- 范例
+
+```javascript
+<template>
+  <vanx-list
+    row-key="key"
+    :columns="columns"
+    :data="fetchData"
+    :selectable="false"
+    :deletable="true"
+    @click="handleClickRow"
+    @select="handleSelect"
+    @delete="handleDeleteRow" />
+</template>
+<script>
+import VanxList from '@/components/vantx/List'
+export default {
+  components: { VanxList },
+  data () {
+    return {
+      columns: [
+        {
+          title: '第一列不显示',
+          dataIndex: 'name'
+        },
+        {
+          title: '年龄',
+          dataIndex: 'age'
+        },
+        {
+          title: '性别',
+          dataIndex: 'sex'
+        }
+      ]
+    }
+  },
+  methods: {
+    getRandomIntInclusive (min, max) {
+      min = Math.ceil(min)
+      max = Math.floor(max)
+      return Math.floor(Math.random() * (max - min + 1)) + min
+    },
+    fetchData (params) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const data = []
+          const pageSize = 25
+          const pageNo = params.pageNo || 1
+          const maxCount = 150
+          for (let i = 0; i < pageSize; i++) {
+            const key = (pageNo - 1) * pageSize + i + 1
+            if (key > maxCount) {
+              break
+            }
+            const item = {
+              key: key,
+              name: `Item${key}`,
+              age: this.getRandomIntInclusive(18, 40),
+              sex: ['男', '女'][this.getRandomIntInclusive(0, 1)]
+            }
+            data.push(item)
+          }
+          const result = {
+            pageSize: pageSize,
+            pageNo: pageNo,
+            totalPage: Math.ceil(maxCount / pageSize),
+            totalCount: maxCount,
+            data: data
+          }
+          resolve(result)
+        }, 1000)
+      })
+    },
+    handleClickRow (row) {
+
+    },
+    handleSelect (keys) {
+
+    },
+    handleDeleteRow (row) {
+
+    }
+  }
+}
+</script>
+
+```
