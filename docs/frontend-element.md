@@ -146,6 +146,7 @@ export const asyncRoutes = [
 
 ## element扩展组件 elx-table
 exl-table是对ex-table列表组件的扩展，增强了如下功能
+
 1. 集成了分页
 2. 数据源参数data修改为function（原参是array），这样才能集成分页
 3. 增加了多选功能，分页切换能保持选中
@@ -162,6 +163,7 @@ exl-table是对ex-table列表组件的扩展，增强了如下功能
 ```
 
 扩展参数说明
+
 参数|说明|类型|默认值
 ---|---|---|---
 data|数据源|function|-
