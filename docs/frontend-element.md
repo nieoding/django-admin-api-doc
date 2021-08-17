@@ -40,11 +40,11 @@ npm run dev
 │   ├── ChangePasswordDialog.vue        # 修改密码弹框
 │   ├── ChangePasswordForm.vue          # 修改密码表单
 │   ├── DialogOrDrawer.vue              # 弹框抽象（对话框/抽屉）
-│   ├── EditDialog.vue                  # 编辑弹框
+│   ├── EditDialog.vue                  # 新增页/编辑页
 │   ├── EditForm.vue                    # 编辑表单
-│   ├── ViewDialog.vue                  # 查看弹框
+│   ├── ViewDialog.vue                  # 查看页
 │   └── ViewForm.vue                    # 查看表单
-├── index.vue                           # 总入口页
+├── index.vue                           # 列表页
 └── models                              # 数据模型
     └── meta.js                         # metainfo本地缓存
 ```
@@ -162,7 +162,7 @@ exl-table是对ex-table列表组件的扩展，增强了如下功能
 }
 ```
 
-扩展参数说明
+- 扩展参数说明
 
 参数|说明|类型|默认值
 ---|---|---|---
@@ -171,7 +171,8 @@ row-key|主键名|string|-
 page-size|分页页数|number|10
 row-selection|列表项是否可选择|object|null
 
-范例代码
+- 范例代码
+
 ```javascript
 <template>
   <div class="app-container">

@@ -37,9 +37,9 @@ npm run serve
 │   └── ForeignSelect.vue         # models.ForeignKey
 ├── form                          # 表单列表
 │   ├── ChangePasswordForm.vue    # 修改密码
-│   ├── EditForm.vue              # 编辑或新增
-│   └── ViewForm.vue              # 查看
-├── index.vue                     # 总入口页
+│   ├── EditForm.vue              # 新增页/编辑页
+│   └── ViewForm.vue              # 查看页
+├── index.vue                     # 列表页
 ├── models                        # 数据模型
 │   └── meta.js                   # metainfo本地缓存
 └── slots                         # 插槽列表
