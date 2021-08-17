@@ -158,7 +158,7 @@ exl-table是对ex-table列表组件的扩展，增强了如下功能
     "pageNo": 1,            // 当前第几页
     "totalPage": 5,         // 总页数
     "totalCount": 100,      // 总记录数
-    "data": []
+    "data": []              // 当页记录集
 }
 ```
 
@@ -172,7 +172,7 @@ page-size|分页页数|number|10
 row-selection|列表项是否可选择|object|null
 
 范例代码
-```javascript
+```java
 <template>
   <div class="app-container">
     <ext-table
