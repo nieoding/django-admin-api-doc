@@ -171,7 +171,7 @@ row-key|主键名|string|-
 page-size|分页页数|number|10
 row-selection|列表项是否可选择|object|null
 
-- 范例代码
+- 范例
 
 ```javascript
 <template>
@@ -233,4 +233,5 @@ export default {
   }
 }
 </script>
+
 ```
