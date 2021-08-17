@@ -154,10 +154,10 @@ exl-table是对ex-table列表组件的扩展，增强了如下功能
 由于集成了服务端分页，对服务端返回结果做了如下数据结构约定
 ```json
 {
-    "pageSize": 20,
-    "pageNo": 1,
-    "totalPage": 5,
-    "totalCount": 100,
+    "pageSize": 20,         // 一页显示多少记录
+    "pageNo": 1,            // 当前第几页
+    "totalPage": 5,         // 总页数
+    "totalCount": 100,      // 总记录数
     "data": []
 }
 ```
@@ -167,8 +167,9 @@ exl-table是对ex-table列表组件的扩展，增强了如下功能
 参数|说明|类型|默认值
 ---|---|---|---
 data|数据源|function|-
-pageSize|分页页数|number|10
-rowSelection|列表项是否可选择|object|null
+row-key|主键名|string|-
+page-size|分页页数|number|10
+row-selection|列表项是否可选择|object|null
 
 范例代码
 ```javascript
