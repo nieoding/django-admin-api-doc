@@ -6,8 +6,6 @@
 
 [Antd Design Pro Vue](https://pro.antdv.com/)是Pro的Vue版本实现，说是说社区实现，但相信也是官方出品的，毕竟vue在中国是最受欢迎的前端框架，我们这里目前采用的基础框架就是它。
 
-[Ant Design Mobile](https://mobile.ant.design/)是Ant移动端框架，我们并没有用到，这里列出来纯属吐槽，antd的这套移动端框架很弱，基本就是抄vant的，连别人的BUG都抄，而且组件库风格和ant差异很大，我相信它不做大改动，路走不远。
-
 阿里出品，必属精品，Antd本身还是一套很有生命力的框架，是我们的项目选型首选！
 
 ## 安装
